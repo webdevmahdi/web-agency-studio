@@ -1,0 +1,27 @@
+{
+  "title": "Webship - Free AI Web Design Agency Course",
+  "url": "https://webild-components-version-4.vercel.app/components/templates/web-agency",
+  "body": "Made with Webild\nLoading...",
+  "scroll": {
+    "height": 844,
+    "width": 390,
+    "y": 0
+  },
+  "elements": [
+    {
+      "tag": "BUTTON",
+      "text": "Made with Webild",
+      "href": null,
+      "cls": "fixed z-99999 bottom-6 right-6 flex items-center gap-2 p-1 pr-3 rounded-[6px] cursor-pointer transit",
+      "y": 776
+    }
+  ],
+  "assets": [
+    {
+      "tag": "IMG",
+      "src": "https://storage.googleapis.com/webild/default/platform/logo-icon.png",
+      "poster": null
+    }
+  ],
+  "media": []
+}

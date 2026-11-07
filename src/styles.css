@@ -153,3 +153,131 @@
     color: var(--color-foreground);
   }
 }
+
+/* site-import tokens: begin (generated; re-import replaces this block) */
+/* Imported clone roles use prefixed Tailwind utilities
+   (bg-site-import-primary, text-site-import-foreground, …); edit the
+   --site-import-* variables to restyle the clone. Unprefixed roles theme new UI. */
+:root {
+  --background: oklch(1 0 0);
+  --site-import-background: oklch(1 0 0);
+  --foreground: oklch(0.20463 0 0);
+  --site-import-foreground: oklch(0.20463 0 0);
+  --primary: oklch(0.62898 0.19052 257.99);
+  --site-import-primary: oklch(0.62898 0.19052 257.99);
+  --primary-foreground: oklch(0.985 0 0);
+  --site-import-primary-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 0.15);
+  --site-import-border: oklch(1 0 0 / 0.15);
+  --card: oklch(0.98809 0 0);
+  --site-import-card: oklch(0.98809 0 0);
+  --muted: oklch(1 0 0 / 0.25);
+  --site-import-muted: oklch(1 0 0 / 0.25);
+}
+/* Design tokens captured from the imported site, registered as Tailwind
+   utilities (bg-<name>, text-<name>, font-<name>). var() values live in
+   the imported stylesheet's :root. */
+@theme inline {
+  --font-sans: "Inter Tight", "Inter Tight Fallback";
+  --color-site-import-background: var(--site-import-background);
+  --color-site-import-foreground: var(--site-import-foreground);
+  --color-site-import-primary: var(--site-import-primary);
+  --color-site-import-primary-foreground: var(--site-import-primary-foreground);
+  --color-site-import-border: var(--site-import-border);
+  --color-site-import-card: var(--site-import-card);
+  --color-site-import-muted: var(--site-import-muted);
+  --color-dark: var(--dark);
+}
+@theme reference {
+  --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+  --animate-spin: spin 1s linear infinite;
+  --aspect-video: 16 / 9;
+  --blur-3xl: 64px;
+  --blur-sm: 8px;
+  --blur-xl: 24px;
+  --blur-xs: 4px;
+  --color-background: #fff;
+  --color-blue: #3385f9;
+  --color-blue-100: lab(92.0301% -2.24757 -11.6453);
+  --color-blue-700: lab(36.9089% 35.0961 -85.6872);
+  --color-bright-green: #55fe77;
+  --color-bright-red: #ff2d31;
+  --color-dark-grey: #1f1d25;
+  --color-foreground: #171717;
+  --color-green-400: lab(78.503% -64.9265 39.7492);
+  --color-green-600: lab(59.0978% -58.6621 41.2579);
+  --color-grey: #f3f3f3;
+  --color-off-white: #f5f5f5cc;
+  --color-pink: #f9266f;
+  --color-portal-dark: #000812;
+  --color-purple: #6d33fc;
+  --color-red-100: lab(92.243% 10.2865 3.83865);
+  --color-red-200: lab(86.017% 19.8815 7.75869);
+  --color-red-400: lab(63.7053% 60.745 31.3109);
+  --color-red-50: lab(96.5005% 4.18508 1.52328);
+  --color-red-500: lab(55.4814% 75.0732 48.8528);
+  --color-red-600: lab(48.4493% 77.4328 61.5452);
+  --color-red-800: lab(33.7174% 55.8993 41.0293);
+  --color-red-900: lab(28.5139% 44.5539 29.0463);
+  --color-transparent-grey: #f8f9f8;
+  --color-yellow-400: lab(83.2664% 8.65132 106.895);
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-lg: 32rem;
+  --container-md: 28rem;
+  --container-sm: 24rem;
+  --drop-shadow-lg: 0 4px 4px #00000026;
+  --drop-shadow-xl: 0 9px 7px #0000001a;
+  --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-snug: 1.375;
+  --leading-tight: 1.25;
+  --radius-extra-sm: 11px;
+  --radius-lg: 13px;
+  --radius-max-sm: 8px;
+  --radius-max-xs: 4px;
+  --radius-md: 13px;
+  --radius-sm: 13px;
+  --spacing: .25rem;
+  --spacing-1: calc(clamp(.551rem, .882vw, 1.103rem) * .25);
+  --spacing-2: calc(clamp(.551rem, .882vw, 1.103rem) * .5);
+  --spacing-3: calc(clamp(.551rem, .882vw, 1.103rem) * .75);
+  --spacing-4: clamp(.551rem, .882vw, 1.103rem);
+  --spacing-5: calc(clamp(.551rem, .882vw, 1.103rem) * 1.25);
+  --text-2xl: clamp(1.2046rem, 1.62vw, 1.78rem);
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-2xs: clamp(.475rem, .585vw, .83rem);
+  --text-3xl: clamp(1.44495rem, 1.865vw, 2.04rem);
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: clamp(1.6872rem, 2.455vw, 2.28rem);
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: clamp(2.8196rem, 4.58vw, 3.8rem);
+  --text-5xl--line-height: 1;
+  --text-6xl: clamp(2.6rem, 3.75vw, 4rem);
+  --text-6xl--line-height: 1;
+  --text-7xl: clamp(1.2046rem, 1.5903vw, 1.6872rem);
+  --text-7xl--line-height: 1;
+  --text-8xl: clamp(1.776rem, 3vw, 3rem);
+  --text-8xl--line-height: 1;
+  --text-9xl: 8rem;
+  --text-base: clamp(.84265rem, .98vw, 1.14rem);
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: clamp(.9633rem, 1.13vw, 1.28rem);
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-sm: clamp(.72295rem, .885vw, 1.01rem);
+  --text-sm--line-height: calc(1.25 / .875);
+  --text-xl: clamp(1.026rem, 1.305vw, 1.45rem);
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-xs: clamp(.66215rem, .785vw, .91rem);
+  --text-xs--line-height: calc(1 / .75);
+  --tracking-tight: -.025em;
+}
+/* site-import tokens: end */
