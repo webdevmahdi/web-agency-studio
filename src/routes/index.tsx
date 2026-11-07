@@ -1,13 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import capturedCSS from "../styles/site.css?raw";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "Templates | Webild" }] }),
+  head: () => ({ meta: [
+    { title: "Web Agency Template | Webild" },
+    { name: "description", content: "Webild's web agency template preview for digital design and development." },
+    { property: "og:title", content: "Web Agency Template | Webild" },
+    { property: "og:description", content: "Webild's web agency template preview for digital design and development." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   staticData: { importedDocument: { html: { "lang": "en" }, body: { "className": "inter_tight_79f009b9-module__4loMJa__className \x61ntialiased \x66lex \x68-dvh \x6dd:\x68-screen \x6fverflow-hidden" } } },
   component: Index,
 });
 
 function Index() {
+  const [showCookies, setShowCookies] = useState(true);
   return (
     <>
       <style>{capturedCSS}</style>
@@ -15,16 +24,16 @@ function Index() {
       <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
         <div />
         <section aria-label="Notifications alt+T" tabIndex={-1} aria-live="polite" aria-relevant="additions text" aria-atomic="false" />
-        <div className={"\x66ixed! flex flex-col z-100 gap-4 p-5 bottom-5 right-5 md:left-auto md:right-5 w-75 md:w-25 card \x72ounded transition-all duration-300 opacity-100 \x74ranslate-y-0"}>
+        {showCookies && <div className={"\x66ixed! flex flex-col z-100 gap-4 p-5 bottom-5 right-5 md:left-auto md:right-5 w-75 md:w-25 card \x72ounded transition-all duration-300 opacity-100 \x74ranslate-y-0"}>
           <div className="flex flex-col gap-2">
             <h3 className="text-base font-medium text-black leading-snug">Cookie preferences</h3>
             <p className="text-sm text-black leading-snug">We use cookies to analyze how you use our site and improve your experience. <a className="underline" href="/cookies">Learn more about our cookie policy</a></p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <button className={"button text-sm font-medium \x6futline-none \x66ocus:\x6futline-none \x66ocus-visible:\x6futline-none transition-all duration-200 button-secondary"} type="button">Decline</button>
-            <button className={"button text-sm font-medium \x6futline-none \x66ocus:\x6futline-none \x66ocus-visible:\x6futline-none transition-all duration-200 button-accent"} type="button">Accept</button>
+            <button onClick={() => setShowCookies(false)} className={"button text-sm font-medium \x6futline-none \x66ocus:\x6futline-none \x66ocus-visible:\x6futline-none transition-all duration-200 button-secondary"} type="button">Decline</button>
+            <button onClick={() => setShowCookies(false)} className={"button text-sm font-medium \x6futline-none \x66ocus:\x6futline-none \x66ocus-visible:\x6futline-none transition-all duration-200 button-accent"} type="button">Accept</button>
           </div>
-        </div>
+        </div>}
         <div className="flex-1 min-h-0 overflow-y-auto" id="signed-out-content">
           <div className="w-full h-screen relative bg-background">
             <div className="absolute inset-0 flex items-center justify-center bg-background transition-opacity duration-300 z-10 opacity-0 pointer-events-none">

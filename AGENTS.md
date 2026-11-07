@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Keep imported page markup and interactions in its route file, with source CSS and media separate, to preserve the captured layout and cascade.
