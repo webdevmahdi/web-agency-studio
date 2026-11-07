@@ -1,17 +1,75 @@
 {
   "source": "https://www.webild.io/templates/web-agency",
   "route": "/",
-  "sourceReview": {"status":"blocked","viewports":["1280x1800","390x844"],"reason":"Direct browser requests returned HTTP 500 with blank content.","artifacts":"/tmp/browser/source-review"},
+  "sourceReview": {
+    "status": "blocked",
+    "viewports": [
+      "1280x1800",
+      "390x844"
+    ],
+    "reason": "Direct browser requests returned HTTP 500 with blank content.",
+    "artifacts": "/tmp/browser/source-review"
+  },
   "previewReview": {
-    "viewports":["1280x1800","390x844"],
-    "scrollContainer":"#signed-out-content",
-    "scrollPosition":0,
-    "cookiePreferences":{"trigger":"Accept or Decline","expected":"Dismiss preferences","initialResult":"failed: buttons inert","repair":"React dismissal handlers"},
-    "navigation":{"status":"failed","reason":"Agency navigation exists only as pixels in a captured preview image."},
-    "heroCTA":{"status":"failed","reason":"Start Project and View Work exist only inside the captured image."},
-    "media":{"status":"static fallback","reason":"Embedded agency preview replaced by a PNG; canvas loading fallback also captured."},
-    "sections":{"status":"blocked","reason":"No underlying agency sections were captured; live source inspection unavailable."},
-    "cookiePolicy":{"status":"destination preserved; page not imported","destination":"/cookies"},
-    "artifacts":"/tmp/browser/import-check"
+    "viewports": [
+      "1280x1800",
+      "390x844"
+    ],
+    "scrollContainer": "#signed-out-content",
+    "scrollPosition": 0,
+    "cookiePreferences": {
+      "trigger": "Accept or Decline",
+      "expected": "Dismiss preferences",
+      "initialResult": "failed: buttons inert",
+      "repair": "React dismissal handlers",
+      "status": "passed dismissal on desktop and phone"
+    },
+    "navigation": {
+      "status": "failed",
+      "reason": "Agency navigation exists only as pixels in a captured preview image."
+    },
+    "heroCTA": {
+      "status": "failed",
+      "reason": "Start Project and View Work exist only inside the captured image."
+    },
+    "media": {
+      "status": "static fallback",
+      "reason": "Embedded agency preview replaced by a PNG; canvas loading fallback also captured."
+    },
+    "sections": {
+      "status": "failed",
+      "items": [
+        "services",
+        "portfolio",
+        "benefits",
+        "results",
+        "team",
+        "FAQ",
+        "contact",
+        "footer"
+      ],
+      "reason": "Importer captured the embedded preview as a single image, not its document."
+    },
+    "cookiePolicy": {
+      "status": "destination preserved; page not imported",
+      "destination": "/cookies"
+    },
+    "artifacts": "/tmp/browser/import-check",
+    "layout": {
+      "status": "failed",
+      "reason": "Static image scales to viewport width and leaves empty space; phone composition differs from a usable mobile agency page."
+    }
+  },
+  "embeddedSource": {
+    "url": "https://webild-components-version-4.vercel.app/components/templates/web-agency",
+    "desktop": "Source loaded; 7313px page with hero, services, portfolio, benefits, results, team, FAQ, contact, footer.",
+    "phone": "Initial loading state; later CTA inventories include content, but complete phone review remains unverified.",
+    "controls": {
+      "Start Project": "#contact",
+      "View Work": "#work",
+      "menu": "not verified",
+      "FAQ": "not verified"
+    },
+    "motion": "No video/audio elements detected; animation not verified."
   }
 }

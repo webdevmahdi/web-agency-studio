@@ -1,0 +1,681 @@
+{
+  "title": "Webship - Free AI Web Design Agency Course",
+  "url": "https://webild-components-version-4.vercel.app/components/templates/web-agency",
+  "body": "Made with Webild\nWebild\nStart Project\n\nAward-Winning Agency\n\nWe Build Digital Experiences\n\nTransform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into customers.\n\nStart Project\nView Work\n\nServices\n\nServices That Drive Results\n\nWe offer a full suite of digital services to help your brand stand out online.\n\nProject Timeline\n\nWeek 1-2\n\nDiscovery & Strategy\n\nDay 1-3\n\nDesign & Prototype\n\nDay 4-7\n\nDevelopment & Launch\n\nDay 8-14\n\nLive\n\nWeb Development\n\nCustom-built websites that are fast, responsive, and designed to convert.\n\nSEO Optimization\n\nWe optimize your website to rank higher on search engines and drive organic traffic.\n\nBranding\n\nBuild a memorable brand identity that resonates with your audience.\n\nOur Work\n\nWork We're Proud Of\n\nA selection of projects we've crafted for clients across industries.\n\nVitality Wellness\n\nHealth & wellbeing platform\n\nMailflow AI\n\nAI-powered email marketing platform\n\nKinetic Studios\n\nMotion graphics & visual effects\n\nOur Promise\n\nWhy Brands Choose Webild\n\nWe deliver results that speak for themselves.\n\nResponsive Design\n\nPixel-perfect websites that look stunning on every screen size and device.\n\nFast Turnaround\n\nFrom concept to launch in record time without sacrificing quality.\n\nSecure Hosting\n\nEnterprise-grade security and 99.9% uptime for your website.\n\nWebild completely transformed our online presence. The team delivered a stunning website that exceeded our expectations and doubled our conversion rate.\n\n\u2014 Maria Santos, CEO at Luxuria Travel\n\nResults\n\nTrusted by Industry Leaders\n\nYears of experience building digital products that drive real results.\n\n100+\nProjects Delivered\nE-commerce platforms\nCorporate websites\nSaaS applications\nMobile-first designs\n99%\nClient Satisfaction\nOn-time delivery\nClear communication\nPost-launch support\nOngoing partnerships\n8+\nYears Experience\nIndustry expertise\nAward-winning work\nGlobal clientele\nProven methodology\n\nTeam\n\nThe Team Behind the Work\n\nThe creative minds behind your next project.\n\nSarah Miller\nLead Developer\nValentina Reyes\nCreative Director\nCarlos Mendoza\nUX Designer\n\nFAQ\n\nFrequently Asked Questions\n\nEverything you need to know about working with us.\n\nHow long does a typical project take?\nWhat is your pricing structure?\nDo you offer ongoing maintenance?\nCan you redesign my existing website?\nWhat technologies do you use?\n\nGet in Touch\n\nReady to Transform Your Digital Presence?\n\nLet's build something extraordinary together. Get in touch and let's discuss your next project.\n\nStart Your Project\nWebild\nCompany\nAbout\nServices\nWork\nContact\nServices\nWeb Development\nSEO\nBranding\nUI/UX Design\nConnect\nTwitter\nLinkedIn\nInstagram\nDribbble\n\u00a9 2026 Webild. All rights reserved.\nPrivacy Policy\nTerms of Service",
+  "scroll": {
+    "height": 7313,
+    "width": 1280,
+    "y": 0
+  },
+  "elements": [
+    {
+      "tag": "BUTTON",
+      "text": "Made with Webild",
+      "href": null,
+      "cls": "fixed z-99999 bottom-6 right-6 flex items-center gap-2 p-1 pr-3 rounded-[6px] cursor-pointer transit",
+      "y": 1732
+    },
+    {
+      "tag": "NAV",
+      "text": "Webild\nStart Project",
+      "href": null,
+      "cls": "fixed z-1000 top-5 left-1/2 -translate-x-1/2 w-content-width",
+      "y": 20
+    },
+    {
+      "tag": "A",
+      "text": "Webild",
+      "href": "https://webild-components-version-4.vercel.app/",
+      "cls": "pl-2 text-xl font-medium text-foreground",
+      "y": 43
+    },
+    {
+      "tag": "A",
+      "text": "Start Project",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#contact",
+      "cls": "group flex items-center justify-center h-10 px-6 text-sm rounded cursor-pointer primary-button text-",
+      "y": 33
+    },
+    {
+      "tag": "SECTION",
+      "text": "Award-Winning Agency\n\nWe Build Digital Experiences\n\nTransform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into custome",
+      "href": null,
+      "cls": "relative flex items-center h-fit md:h-svh pt-25 pb-20 md:py-0",
+      "y": 0
+    },
+    {
+      "tag": "H1",
+      "text": "We Build Digital Experiences",
+      "href": null,
+      "cls": "transition-all duration-700 text-7xl 2xl:text-8xl leading-[1.15] font-semibold text-center md:text-l",
+      "y": 795
+    },
+    {
+      "tag": "A",
+      "text": "Start Project",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#contact",
+      "cls": "group flex items-center justify-center h-10 px-6 text-sm rounded cursor-pointer primary-button text-",
+      "y": 1026
+    },
+    {
+      "tag": "A",
+      "text": "View Work",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#work",
+      "cls": "group flex items-center justify-center h-10 px-6 text-sm rounded cursor-pointer secondary-button tex",
+      "y": 1026
+    },
+    {
+      "tag": "SECTION",
+      "text": "Services\n\nServices That Drive Results\n\nWe offer a full suite of digital services to help your brand stand out online.\n\nProject Timeline\n\nWeek 1-2\n\nDiscovery & Strategy\n\nDay 1-3\n\nDe",
+      "href": null,
+      "cls": "py-20",
+      "y": 1800
+    },
+    {
+      "tag": "H2",
+      "text": "Services That Drive Results",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 1917
+    },
+    {
+      "tag": "H3",
+      "text": "Web Development",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug",
+      "y": 2384
+    },
+    {
+      "tag": "H3",
+      "text": "SEO Optimization",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug",
+      "y": 2384
+    },
+    {
+      "tag": "H3",
+      "text": "Branding",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug",
+      "y": 2384
+    },
+    {
+      "tag": "SECTION",
+      "text": "Our Work\n\nWork We're Proud Of\n\nA selection of projects we've crafted for clients across industries.\n\nVitality Wellness\n\nHealth & wellbeing platform\n\nMailflow AI\n\nAI-powered email m",
+      "href": null,
+      "cls": "w-full py-20",
+      "y": 2532
+    },
+    {
+      "tag": "H2",
+      "text": "Work We're Proud Of",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 2649
+    },
+    {
+      "tag": "H3",
+      "text": "Vitality Wellness",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug truncate",
+      "y": 3108
+    },
+    {
+      "tag": "A",
+      "text": "View more",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#",
+      "cls": "flex items-center justify-center shrink-0 size-9 cursor-pointer primary-button rounded-full",
+      "y": 3111
+    },
+    {
+      "tag": "H3",
+      "text": "Mailflow AI",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug truncate",
+      "y": 3095
+    },
+    {
+      "tag": "A",
+      "text": "View more",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#",
+      "cls": "flex items-center justify-center shrink-0 size-9 cursor-pointer primary-button rounded-full",
+      "y": 3098
+    },
+    {
+      "tag": "H3",
+      "text": "Kinetic Studios",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug truncate",
+      "y": 3095
+    },
+    {
+      "tag": "A",
+      "text": "View more",
+      "href": "https://webild-components-version-4.vercel.app/components/templates/web-agency#",
+      "cls": "flex items-center justify-center shrink-0 size-9 cursor-pointer primary-button rounded-full",
+      "y": 3098
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Previous slide",
+      "href": null,
+      "cls": "flex items-center justify-center h-9 aspect-square primary-button rounded cursor-pointer pointer-eve",
+      "y": 2960
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Next slide",
+      "href": null,
+      "cls": "flex items-center justify-center h-9 aspect-square primary-button rounded cursor-pointer pointer-eve",
+      "y": 2960
+    },
+    {
+      "tag": "SECTION",
+      "text": "Our Promise\n\nWhy Brands Choose Webild\n\nWe deliver results that speak for themselves.\n\nResponsive Design\n\nPixel-perfect websites that look stunning on every screen size and device.\n",
+      "href": null,
+      "cls": "flex flex-col gap-8 md:gap-10 py-20",
+      "y": 3272
+    },
+    {
+      "tag": "H2",
+      "text": "Why Brands Choose Webild",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 3389
+    },
+    {
+      "tag": "H3",
+      "text": "Responsive Design",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug text-balance",
+      "y": 3720
+    },
+    {
+      "tag": "H3",
+      "text": "Fast Turnaround",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug text-balance",
+      "y": 3720
+    },
+    {
+      "tag": "H3",
+      "text": "Secure Hosting",
+      "href": null,
+      "cls": "text-2xl font-semibold leading-snug text-balance",
+      "y": 3720
+    },
+    {
+      "tag": "SECTION",
+      "text": "Webild completely transformed our online presence. The team delivered a stunning website that exceeded our expectations and doubled our conversion rate.\n\n\u2014 Maria Santos, CEO at Lux",
+      "href": null,
+      "cls": "py-20",
+      "y": 3867
+    },
+    {
+      "tag": "SECTION",
+      "text": "Results\n\nTrusted by Industry Leaders\n\nYears of experience building digital products that drive real results.\n\n100+\nProjects Delivered\nE-commerce platforms\nCorporate websites\nSaaS a",
+      "href": null,
+      "cls": "py-20",
+      "y": 4319
+    },
+    {
+      "tag": "H2",
+      "text": "Trusted by Industry Leaders",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 4436
+    },
+    {
+      "tag": "SECTION",
+      "text": "Team\n\nThe Team Behind the Work\n\nThe creative minds behind your next project.\n\nSarah Miller\nLead Developer\nValentina Reyes\nCreative Director\nCarlos Mendoza\nUX Designer",
+      "href": null,
+      "cls": "py-20",
+      "y": 4934
+    },
+    {
+      "tag": "H2",
+      "text": "The Team Behind the Work",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 5051
+    },
+    {
+      "tag": "SECTION",
+      "text": "FAQ\n\nFrequently Asked Questions\n\nEverything you need to know about working with us.\n\nHow long does a typical project take?\nWhat is your pricing structure?\nDo you offer ongoing main",
+      "href": null,
+      "cls": "py-20",
+      "y": 5620
+    },
+    {
+      "tag": "H2",
+      "text": "Frequently Asked Questions",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 5737
+    },
+    {
+      "tag": "H3",
+      "text": "How long does a typical project take?",
+      "href": null,
+      "cls": "text-lg md:text-xl font-medium leading-snug",
+      "y": 5896
+    },
+    {
+      "tag": "H3",
+      "text": "What is your pricing structure?",
+      "href": null,
+      "cls": "text-lg md:text-xl font-medium leading-snug",
+      "y": 5976
+    },
+    {
+      "tag": "H3",
+      "text": "Do you offer ongoing maintenance?",
+      "href": null,
+      "cls": "text-lg md:text-xl font-medium leading-snug",
+      "y": 6056
+    },
+    {
+      "tag": "H3",
+      "text": "Can you redesign my existing website?",
+      "href": null,
+      "cls": "text-lg md:text-xl font-medium leading-snug",
+      "y": 6136
+    },
+    {
+      "tag": "H3",
+      "text": "What technologies do you use?",
+      "href": null,
+      "cls": "text-lg md:text-xl font-medium leading-snug",
+      "y": 6216
+    },
+    {
+      "tag": "SECTION",
+      "text": "Get in Touch\n\nReady to Transform Your Digital Presence?\n\nLet's build something extraordinary together. Get in touch and let's discuss your next project.\n\nStart Your Project",
+      "href": null,
+      "cls": "py-20",
+      "y": 6319
+    },
+    {
+      "tag": "H2",
+      "text": "Ready to Transform Your Digital Presence?",
+      "href": null,
+      "cls": "transition-all duration-700 md:max-w-9/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-ce",
+      "y": 6537
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Start Your Project",
+      "href": null,
+      "cls": "flex items-center justify-center h-10 px-6 text-sm rounded primary-button text-primary-cta-text curs",
+      "y": 6705
+    },
+    {
+      "tag": "SECTION",
+      "text": "Webild\nCompany\nAbout\nServices\nWork\nContact\nServices\nWeb Development\nSEO\nBranding\nUI/UX Design\nConnect\nTwitter\nLinkedIn\nInstagram\nDribbble\n\u00a9 2026 Webild. All rights reserved.\nPrivac",
+      "href": null,
+      "cls": "relative z-0 w-full mt-20",
+      "y": 6971
+    },
+    {
+      "tag": "FOOTER",
+      "text": "Webild\nCompany\nAbout\nServices\nWork\nContact\nServices\nWeb Development\nSEO\nBranding\nUI/UX Design\nConnect\nTwitter\nLinkedIn\nInstagram\nDribbble\n\u00a9 2026 Webild. All rights reserved.\nPrivac",
+      "href": null,
+      "cls": "w-full py-15 primary-button text-primary-cta-text",
+      "y": 1458
+    },
+    {
+      "tag": "H2",
+      "text": "Webild",
+      "href": null,
+      "cls": "text-4xl font-semibold",
+      "y": 1518
+    },
+    {
+      "tag": "H3",
+      "text": "Company",
+      "href": null,
+      "cls": "text-sm opacity-50 truncate",
+      "y": 1518
+    },
+    {
+      "tag": "BUTTON",
+      "text": "About",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1545
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Services",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1575
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Work",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1604
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Contact",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1634
+    },
+    {
+      "tag": "H3",
+      "text": "Services",
+      "href": null,
+      "cls": "text-sm opacity-50 truncate",
+      "y": 1518
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Web Development",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1545
+    },
+    {
+      "tag": "BUTTON",
+      "text": "SEO",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1575
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Branding",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1604
+    },
+    {
+      "tag": "BUTTON",
+      "text": "UI/UX Design",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1634
+    },
+    {
+      "tag": "H3",
+      "text": "Connect",
+      "href": null,
+      "cls": "text-sm opacity-50 truncate",
+      "y": 1518
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Twitter",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1545
+    },
+    {
+      "tag": "BUTTON",
+      "text": "LinkedIn",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1575
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Instagram",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1604
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Dribbble",
+      "href": null,
+      "cls": "text-base text-primary-cta-text hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1634
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Privacy Policy",
+      "href": null,
+      "cls": "text-sm opacity-50 hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1725
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Terms of Service",
+      "href": null,
+      "cls": "text-sm opacity-50 hover:opacity-75 transition-opacity cursor-pointer",
+      "y": 1725
+    }
+  ],
+  "assets": [
+    {
+      "tag": "IMG",
+      "src": "https://storage.googleapis.com/webild/default/platform/logo-icon.png",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-7.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-7.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-7.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-7.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-8.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-8.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-8.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-8.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://storage.googleapis.com/webild/default/templates/web-agency-2/projectnew1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://storage.googleapis.com/webild/default/templates/web-agency-2/projectnew2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://storage.googleapis.com/webild/default/templates/web-agency-2/projectnew3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-3.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://randomuser.me/api/portraits/men/32.jpg",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://randomuser.me/api/portraits/women/44.jpg",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://randomuser.me/api/portraits/men/67.jpg",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-1.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-2.webp",
+      "poster": null
+    },
+    {
+      "tag": "IMG",
+      "src": "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/team-3.webp",
+      "poster": null
+    }
+  ],
+  "media": []
+}
