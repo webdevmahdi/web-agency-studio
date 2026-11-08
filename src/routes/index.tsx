@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, Code2, Download, Menu, Minus, Palette, Plus, Search, ShieldCheck, Smartphone, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import useEmblaCarousel from "embla-carousel-react";
 import shot1 from "@/assets/agency/shot-1.webp.asset.json";
 import shot2 from "@/assets/agency/shot-2.webp.asset.json";
 import shot3 from "@/assets/agency/shot-3.webp.asset.json";
@@ -34,9 +35,9 @@ const services = [
  { title: "Branding", description: "Build a memorable brand identity that resonates with your audience.", icon: Palette },
 ];
 const projects = [
- { title: "Vitality Wellness", description: "Health & wellbeing platform", image: project1.url },
- { title: "Mailflow AI", description: "AI-powered email marketing platform", image: project2.url },
- { title: "Kinetic Studios", description: "Motion graphics & visual effects", image: project3.url },
+ { title: "Vitality Wellness", description: "Health & wellbeing platform", image: project1.url, url: null as string | null },
+ { title: "Mailflow AI", description: "AI-powered email marketing platform", image: project2.url, url: null as string | null },
+ { title: "Kinetic Studios", description: "Motion graphics & visual effects", image: project3.url, url: null as string | null },
 ];
 const faqs = [
  ["How long does a typical project take?", "Most projects are completed within 2-4 weeks depending on scope and complexity. We'll provide a detailed timeline during our initial consultation."],
@@ -53,6 +54,7 @@ function Index() {
  const [scrolled, setScrolled] = useState(false);
  const [showCookies, setShowCookies] = useState(true);
  const [projectOffset, setProjectOffset] = useState(0);
+ const [carouselRef, carouselApi] = useEmblaCarousel({ loop: true, align: "center", duration: 28, breakpoints: { "(prefers-reduced-motion: reduce)": { duration: 0 } } });
  const [projectOpen, setProjectOpen] = useState<number | null>(null);
  const [faqOpen, setFaqOpen] = useState<number | null>(null);
  const [contactOpen, setContactOpen] = useState(false);
@@ -63,6 +65,14 @@ function Index() {
  const contactTrigger = useRef<HTMLButtonElement>(null);
  const projectTrigger = useRef<HTMLButtonElement | null>(null);
  const activeOverlay = menuOpen || contactOpen || projectOpen !== null;
+
+ useEffect(() => {
+  if (!carouselApi) return;
+  const onSelect = () => setProjectOffset(carouselApi.selectedScrollSnap());
+  onSelect();
+  carouselApi.on("select", onSelect).on("reInit", onSelect);
+  return () => { carouselApi.off("select", onSelect).off("reInit", onSelect); };
+ }, [carouselApi]);
 
  useEffect(() => {
   setHydrated(true);
@@ -123,8 +133,14 @@ function Index() {
     <div className="agency-timeline agency-reveal">{[["01","Discovery & Strategy","Day 1–3"],["02","Design & Prototype","Day 4–7"],["03","Development & Launch","Day 8–14"]].map(([number,title,time]) => <div key={number}><span>{number}</span><div><div><p>{title}</p></div><span>{time}</span></div></div>)}</div>
    </div></section>
    <section id="work" className="agency-section agency-work"><div className="agency-container">
-    <div className="agency-work-top agency-reveal"><div className="agency-section-heading"><span className="agency-eyebrow">Our Work</span><h2>Work We're Proud Of</h2><p>A selection of projects we've crafted for clients across industries.</p></div><div className="agency-carousel-actions"><Button variant="outline" className="agency-icon" title="Previous projects" aria-label="Previous projects" onClick={() => setProjectOffset(i => (i+2)%3)}><ArrowLeft /></Button><Button variant="outline" className="agency-icon" title="Next projects" aria-label="Next projects" onClick={() => setProjectOffset(i => (i+1)%3)}><ArrowRight /></Button></div></div>
-    <div className="agency-grid" aria-live="polite">{projects.map((_,position) => { const index=(projectOffset+position)%projects.length; const project=projects[index];if (!project) return null;return <article className="agency-project agency-reveal" key={project.title}><img src={project.image} alt={`${project.title} website`} loading="lazy" /><div className="agency-project-caption"><div><h3>{project.title}</h3><p>{project.description}</p></div><Button variant="secondary" className="agency-icon" aria-label={`View ${project.title}`} title={`View ${project.title}`} onClick={e => { projectTrigger.current=e.currentTarget;setProjectOpen(index); }}><ArrowUpRight /></Button></div></article>; })}</div>
+     <div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">Our Work</span><h2>Work We're Proud Of</h2><p>A selection of projects we've crafted for clients across industries.</p></div>
+     <div className="agency-work-carousel agency-reveal" role="region" aria-roledescription="carousel" aria-label="Featured projects" onKeyDown={e => { if (e.key === "ArrowLeft") { e.preventDefault();carouselApi?.scrollPrev(); } else if (e.key === "ArrowRight") { e.preventDefault();carouselApi?.scrollNext(); } }}>
+      <div className="agency-work-viewport" ref={carouselRef}><div className="agency-work-track">{projects.map((project,index) => <article className={`agency-work-slide ${projectOffset===index ? "is-active" : ""}`} key={project.title} role="group" aria-roledescription="slide" aria-label={`${index+1} of ${projects.length}: ${project.title}`}>
+       <div className="agency-project"><img src={project.image} alt={`${project.title} website`} loading={index===0 ? "eager" : "lazy"} draggable={false} /><div className="agency-project-caption"><div className="min-w-0"><h3>{project.title}</h3><p>{project.description}</p></div>{project.url ? <Button asChild className="agency-icon" title={`Visit ${project.title}`} tabIndex={projectOffset===index ? 0 : -1}><a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title}`}><ArrowUpRight /></a></Button> : <Button className="agency-icon" aria-label={`View ${project.title}`} title={`View ${project.title}`} tabIndex={projectOffset===index ? 0 : -1} onClick={e => { projectTrigger.current=e.currentTarget;setProjectOpen(index); }}><ArrowUpRight /></Button>}</div></div>
+      </article>)}</div></div>
+      <Button className="agency-icon agency-work-prev" title="Previous projects" aria-label="Previous projects" onClick={() => carouselApi?.scrollPrev()}><ArrowLeft /></Button><Button className="agency-icon agency-work-next" title="Next projects" aria-label="Next projects" onClick={() => carouselApi?.scrollNext()}><ArrowRight /></Button>
+      <span className="sr-only" aria-live="polite" aria-atomic="true">{projects[projectOffset]?.title}</span>
+     </div>
    </div></section>
    <section id="about" className="agency-section"><div className="agency-container">
     <div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">Our Promise</span><h2>Why Brands Choose Webild</h2><p>We deliver results that speak for themselves.</p></div>
