@@ -32,3 +32,4 @@ use the editor.
 - Keep imported page markup and interactions in its route file, with source CSS and media separate, to preserve the captured layout and cascade.
 - Use native document scrolling with accessible anchor navigation and reduced-motion-aware animations; avoid fixed-height page containers that hide sections.
 - Keep the contact interaction frontend-only until enquiry delivery is configured; never display a sent confirmation for a local download.
+- Use the existing Embla engine for the route-local portfolio carousel; optional project URLs open externally, while unset URLs preserve project-detail dialogs rather than inventing destinations.
