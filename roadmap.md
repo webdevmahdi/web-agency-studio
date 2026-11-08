@@ -6,5 +6,5 @@
 
 # Our Work reference match
 
-- [ ] Recreate centered featured carousel and glass captions without changing other sections.
-- [ ] Verify arrows, looping, mobile swipe, and desktop/tablet/mobile proportions.
+- [x] Recreate centered featured carousel and glass captions without changing other sections.
+- [x] Verify arrows, looping, mobile swipe, and desktop/tablet/mobile proportions.
