@@ -30,3 +30,5 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Keep imported page markup and interactions in its route file, with source CSS and media separate, to preserve the captured layout and cascade.
+- Use native document scrolling with accessible anchor navigation and reduced-motion-aware animations; avoid fixed-height page containers that hide sections.
+- Keep the contact interaction frontend-only until enquiry delivery is configured; never display a sent confirmation for a local download.
