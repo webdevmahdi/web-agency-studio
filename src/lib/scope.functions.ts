@@ -41,7 +41,7 @@ export const generateScope = createServerFn({ method: "POST" })
           "You are a senior project strategist at Webild, a web design and development agency. Webild offers: Web Development, SEO Optimization, Branding, plus responsive design, fast turnaround (typical projects take 2-4 weeks), secure hosting and ongoing maintenance. Write a concise, realistic project scope for the prospective client. Only recommend services Webild offers. Do not quote prices.",
         input: [{ role: "user", content: `Project description:\n${data.description}\n\nBudget: ${data.budget || "not specified"}` }],
         text: { format: { type: "json_schema", name: "project_scope", strict: true, schema } },
-      } as never);
+      });
       const r = res as unknown as { output_text?: string; output?: { type: string; content?: { type: string; text?: string }[] }[] };
       const text = r.output_text ?? r.output?.flatMap(o => o.content ?? []).find(c => c.type === "output_text")?.text;
       if (!text) return { error: "The assistant didn't return a scope. Please try again." };
