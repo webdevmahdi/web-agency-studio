@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Check, Code2, Download, Menu, Minus, Palette, Plus, Search, ShieldCheck, Smartphone, X, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
+import { useServerFn } from "@tanstack/react-start";
+import { generateScope, type ProjectScope } from "@/lib/scope.functions";
 import shot1 from "@/assets/agency/shot-1.webp.asset.json";
 import shot2 from "@/assets/agency/shot-2.webp.asset.json";
 import shot3 from "@/assets/agency/shot-3.webp.asset.json";
@@ -47,6 +49,39 @@ const faqs = [
  ["What technologies do you use?", "We build with modern technologies including Next.js, React, and Tailwind CSS to ensure fast, scalable, and maintainable websites."],
 ];
 const navigation: readonly (readonly [string, string])[] = [["Services", "services"], ["Work", "work"], ["About", "about"], ["Team", "team"], ["Contact", "contact"]];
+
+function ScopePlanner({ onContact }: { onContact: () => void }) {
+ const run = useServerFn(generateScope);
+ const [description, setDescription] = useState("");
+ const [budget, setBudget] = useState("");
+ const [loading, setLoading] = useState(false);
+ const [error, setError] = useState<string | null>(null);
+ const [scope, setScope] = useState<ProjectScope | null>(null);
+ const submit = async (e: React.FormEvent) => {
+  e.preventDefault(); setLoading(true); setError(null);
+  try { const res = await run({ data: { description, budget } }); if ("error" in res) setError(res.error); else setScope(res.scope); }
+  catch (err) { setError(err instanceof Error ? err.message : "Something went wrong. Please try again."); }
+  finally { setLoading(false); }
+ };
+ return <section id="scope" className="agency-section"><div className="agency-container">
+  <div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">Project Planner</span><h2>Get an Instant Project Scope</h2><p>Describe what you need and our AI planner will suggest a tailored scope and the services that fit.</p></div>
+  <form className="agency-scope-form" onSubmit={submit}>
+   <label>What are you looking to build?<textarea className="agency-input" value={description} onChange={e => setDescription(e.target.value)} minLength={20} maxLength={3000} required placeholder="e.g. A booking website for my yoga studio with class schedules, online payments and better Google visibility." /></label>
+   <label>Budget range (optional)<input className="agency-input" value={budget} onChange={e => setBudget(e.target.value)} maxLength={100} placeholder="e.g. $5k–$10k" /></label>
+   <Button type="submit" className="agency-button" disabled={loading}>{loading ? "Generating scope…" : <>Generate my scope <Zap /></>}</Button>
+   {error && <p className="agency-scope-error" role="alert">{error}</p>}
+  </form>
+  {scope && <div className="agency-scope-result" aria-live="polite">
+   <p className="agency-scope-summary">{scope.summary}</p>
+   <h3>Recommended services</h3><div className="agency-scope-services">{scope.services.map(s => <div key={s.name}><strong>{s.name}</strong><p>{s.reason}</p></div>)}</div>
+   <h3>Phases · {scope.timeline}</h3><ol className="agency-scope-phases">{scope.phases.map(p => <li key={p.name}><strong>{p.name}</strong> <span>{p.duration}</span><ul>{p.tasks.map(t => <li key={t}>{t}</li>)}</ul></li>)}</ol>
+   <h3>Deliverables</h3><ul className="agency-scope-list">{scope.deliverables.map(d => <li key={d}><Check />{d}</li>)}</ul>
+   {scope.considerations.length > 0 && <><h3>Things to consider</h3><ul className="agency-scope-list">{scope.considerations.map(c => <li key={c}>{c}</li>)}</ul></>}
+   <p className="agency-dialog-note">AI-generated estimate — we'll refine it with you.</p>
+   <Button className="agency-button" onClick={onContact}>Discuss this scope <ArrowUpRight /></Button>
+  </div>}
+ </div></section>;
+}
 
 function Index() {
  const [hydrated, setHydrated] = useState(false);
@@ -150,7 +185,8 @@ function Index() {
    <section className="agency-section"><div className="agency-container"><div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">Results</span><h2>Trusted by Industry Leaders</h2><p>Years of experience building digital products that drive real results.</p></div><div className="agency-grid agency-stats agency-reveal">{[["100+","Projects Delivered"],["99%","Client Satisfaction"],["8+","Years Experience"]].map(([value,label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div></div></section>
    <section id="team" className="agency-section"><div className="agency-container"><div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">Team</span><h2>The Team Behind the Work</h2><p>The creative minds behind your next project.</p></div><div className="agency-grid agency-team">{[["Sarah Miller","Lead Developer",team1.url],["Valentina Reyes","Creative Director",team2.url],["Carlos Mendoza","UX Designer",team3.url]].map(([name,role,image]) => <article className="agency-reveal" key={name}><img src={image} alt={name} loading="lazy" /><h3>{name}</h3><p>{role}</p></article>)}</div></div></section>
    <section id="faq" className="agency-section"><div className="agency-container"><div className="agency-section-heading agency-reveal"><span className="agency-eyebrow">FAQ</span><h2>Frequently Asked Questions</h2><p>Everything you need to know about working with us.</p></div><div className="agency-faq">{faqs.map(([question,answer],i) => <div className="agency-faq-item" key={question}><Button variant="ghost" className="agency-faq-trigger" aria-expanded={faqOpen===i} aria-controls={`faq-${i}`} onClick={() => setFaqOpen(current => current===i ? null : i)}>{question}{faqOpen===i ? <Minus /> : <Plus />}</Button>{faqOpen===i && <div id={`faq-${i}`} className="agency-faq-answer">{answer}</div>}</div>)}</div></div></section>
-   <section id="contact" className="agency-contact"><div className="agency-container agency-reveal"><span className="agency-eyebrow">Get in Touch</span><h2>Ready to Transform Your Digital Presence?</h2><p>Let's build something extraordinary together. Get in touch and let's discuss your next project.</p><form className="agency-contact-form" onSubmit={e => { e.preventDefault();setBriefReady(false);setContactOpen(true); }}><input className="agency-input" aria-label="Email address" type="email" autoComplete="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required /><Button ref={contactTrigger} type="submit" className="agency-button">Start Your Project <ArrowUpRight /></Button></form></div></section>
+    <ScopePlanner onContact={() => goTo("contact")} />
+    <section id="contact" className="agency-contact"><div className="agency-container agency-reveal"><span className="agency-eyebrow">Get in Touch</span><h2>Ready to Transform Your Digital Presence?</h2><p>Let's build something extraordinary together. Get in touch and let's discuss your next project.</p><form className="agency-contact-form" onSubmit={e => { e.preventDefault();setBriefReady(false);setContactOpen(true); }}><input className="agency-input" aria-label="Email address" type="email" autoComplete="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} required /><Button ref={contactTrigger} type="submit" className="agency-button">Start Your Project <ArrowUpRight /></Button></form></div></section>
   </main>
   <footer className="agency-footer"><div className="agency-container"><div className="agency-footer-top"><a className="agency-brand" href="#top" onClick={e => { e.preventDefault();goTo("top"); }}>Webild</a><nav className="agency-footer-nav" aria-label="Footer navigation">{navigation.map(([label,id]) => <a key={id} href={`#${id}`} onClick={e => { e.preventDefault();goTo(id); }}>{label}</a>)}</nav></div><div className="agency-footer-bottom">© 2026 Webild. All rights reserved.</div></div></footer>
   {showCookies && <aside className="agency-cookie" aria-label="Cookie preferences"><h3>Cookie preferences</h3><p>We use cookies to analyze how you use our site and improve your experience.</p><div className="agency-cookie-actions"><Button variant="secondary" onClick={() => setShowCookies(false)}>Decline</Button><Button onClick={() => setShowCookies(false)}>Accept</Button></div></aside>}

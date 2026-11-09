@@ -8,3 +8,7 @@
 
 - [x] Recreate centered featured carousel and glass captions without changing other sections.
 - [x] Verify arrows, looping, mobile swipe, and desktop/tablet/mobile proportions.
+
+# AI project planner
+
+- [x] Add AI scope generator section and verify end-to-end.
