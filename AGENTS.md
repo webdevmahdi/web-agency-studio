@@ -33,3 +33,4 @@ use the editor.
 - Use native document scrolling with accessible anchor navigation and reduced-motion-aware animations; avoid fixed-height page containers that hide sections.
 - Keep the contact interaction frontend-only until enquiry delivery is configured; never display a sent confirmation for a local download.
 - Use the existing Embla engine for the route-local portfolio carousel; optional project URLs open externally, while unset URLs preserve project-detail dialogs rather than inventing destinations.
+- AI project scoping runs only in a server function (src/lib/scope.functions.ts) with strict JSON schema output; keeps prompts and gateway credentials off the client.
