@@ -143,7 +143,7 @@ h3 { font-size:22px;font-weight:500;margin:0 0 12px; }
 .agency-scope-form label { display: grid; gap: .5rem; font-size: .9rem; color: var(--muted-foreground); }
 .agency-scope-form textarea { min-height: 140px; resize: vertical; }
 .agency-scope-form .agency-button { justify-self: start; }
-.agency-scope-error { color: var(--destructive); }
+.agency-scope-error { color: var(--color-destructive); }
 .agency-scope-result { padding: 2rem; border: 1px solid var(--border); border-radius: 25px; background: var(--card); }
 .agency-scope-result h3 { font-size: 1.1rem; font-weight: 600; margin-top: .75rem; }
 .agency-scope-summary { font-size: 1.05rem; line-height: 1.6; }
